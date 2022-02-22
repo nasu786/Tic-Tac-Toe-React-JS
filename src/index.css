@@ -1,0 +1,187 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda&family=Raleway:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Merienda', sans-serif;
+}
+
+.body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: rgb(216, 222, 240);
+
+}
+
+.main {
+  position: absolute;
+}
+
+.text-win {
+  visibility: hidden;
+  opacity: 0%;
+  transform: scale(1);
+  text-align: center;
+  transition: all .3s ease-out;
+}
+
+.text-win-active {
+  visibility: visible;
+  opacity: 100%;
+  transform: scale(3);
+  text-align: center;
+  transition: all .3s ease-out;
+  cursor:not-allowed;
+}
+
+h2 {
+  font-size: 30px;
+  height: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.turn {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  transition: all .3s ease-out;
+}
+
+.turn-active {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: all .3s ease-out;
+  opacity: 0%;
+}
+
+.gamebox {
+  display: grid;
+  grid: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 8px;
+}
+
+.box {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: rgb(33, 79, 230);
+  font-size: 40px;
+  color: black;
+  cursor: pointer;
+  transition: all .2s ease-out;
+
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: -1px -1px 30px -1px rgba(19, 74, 253, 0.75);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+}
+
+.restart {
+  transform: scale(0);
+  width: 170px;
+  height: 50px;
+  border: none;
+  font-size: 14px;
+  color: white;
+  border-radius: 5px;
+  transition: all .3s ease-out;
+}
+
+.restart-draw {
+  background-color: #0edf0e;
+  transform: scale(1);
+  width: 170px;
+  height: 50px;
+  border: none;
+  font-size: 14px;
+  color: white;
+  border-radius: 5px;
+  transition: all .3s ease-out;
+}
+.restart-draw:hover {
+  box-shadow: 0px 0px 45px 6px rgba(5, 255, 0, 0.30);
+  cursor: pointer;
+}
+
+.restart-draw:active{
+  transform: scale(1.1);
+}
+
+.restart-win {
+  background-color:  rgb(33, 79, 230);
+  transform: scale(1);
+  width: 170px;
+  height: 50px;
+  border: none;
+  font-size: 14px;
+  color: white;
+  border-radius: 5px;
+  transition: all .3s ease-out;
+}
+
+.restart-win:hover {
+  box-shadow: -1px -1px 30px -1px rgba(47, 94, 245, 0.75);
+  cursor: pointer;
+}
+
+.restart-win:active{
+  transform: scale(1.1);
+}
+
+.blue-hover:hover {
+  box-shadow: -1px -1px 30px -1px rgba(19, 74, 253, 0.75);
+}
+
+.box-draw {
+  background-color: red;
+  filter: blur(3px);
+  cursor: not-allowed;
+}
+
+.box-draw:hover {
+  transform: scale(1.05);
+  box-shadow: -1px -1px 30px -1px rgba(253, 19, 19, 0.75);
+}
+
+.box-win {
+  background-color: #0edf0e;
+  filter: blur(3px);
+  cursor: not-allowed;
+}
+
+.box-win:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 45px 6px rgba(5,255,0,0.30);
+}
